@@ -74,12 +74,12 @@ stdenv.mkDerivation rec {
     wrapQtAppsHook
   ];
 
-  meta = with lib; {
+  meta = {
     description = "Companion app for the BitBox02 hardware wallet";
     homepage = "https://bitbox.swiss/app/";
-    license = licenses.asl20;
+    license = lib.licenses.asl20;
     mainProgram = "bitbox";
-    maintainers = [ maintainers.tensor5 ];
+    maintainers = [ lib.maintainers.tensor5 ];
     platforms = [ "x86_64-linux" ];
   };
 }
