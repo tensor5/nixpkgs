@@ -5,8 +5,7 @@
   buildNpmPackage,
   clang,
   go,
-  qtwebengine,
-  wrapQtAppsHook,
+  libsForQt5,
 }:
 
 stdenv.mkDerivation rec {
@@ -66,12 +65,12 @@ stdenv.mkDerivation rec {
     runHook postInstall
   '';
 
-  buildInputs = [ qtwebengine ];
+  buildInputs = [ libsForQt5.qtwebengine ];
 
   nativeBuildInputs = [
     clang
     go
-    wrapQtAppsHook
+    libsForQt5.wrapQtAppsHook
   ];
 
   meta = {
