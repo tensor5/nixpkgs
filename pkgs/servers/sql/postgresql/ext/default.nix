@@ -42,6 +42,8 @@ in {
 
     pgaudit = super.callPackage ./pgaudit.nix { };
 
+    pgml = super.callPackage ./pgml { };
+
     pgmq = super.callPackage ./pgmq.nix { };
 
     pgroonga = super.callPackage ./pgroonga.nix { };
